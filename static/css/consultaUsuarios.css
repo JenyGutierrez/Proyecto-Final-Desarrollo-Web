@@ -1,0 +1,84 @@
+/* // fuente externa */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* ---datos generales -- */
+:root{
+    --uno: #0b182d;
+    --dos: #4d3a68;
+    --tres: #0092ff;
+    --cuatro: #00e9ff;
+    --cinco: #e0ffff;
+    --textoNormal: 'Manrope', sans-serif;
+    --textoTitulo: 'Dosis', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(11,24,45);
+    background: linear-gradient(117deg, rgba(11,24,45,1) 0%, rgba(77,58,104,1) 49%, rgba(0,146,255,1) 94%);
+}
+h2{
+    font-family: var(--textoTitulo);
+    font-size: 28px;
+}
+#instrucciones{
+    font-family:Helvetica, Arial ,sans-serif;
+    font-size: 18px;
+}
+.tarjetas-de-usuarios{
+    background: #e0ffffa4;
+    width: 75%;
+    margin-top: 5%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 2px #000000; 
+    box-shadow: 0px 0px 5px 2px #000000;
+    padding-bottom: 30px;
+}
+table{
+    margin-top: 20px;
+    border: var(--dos) 3px dashed;
+    font-family: var(--textoTitulo);
+    border-collapse: collapse;
+}
+thead{
+    font-family: var(--textoTitulo);
+    font-size: 18px;
+    text-align: center;
+    font-weight: bolder;
+}
+thead td{
+    border: 1px var(--dos) solid;
+    border-bottom: 3px var(--dos) solid;
+    padding: 5px;
+    border-collapse: collapse;
+}
+tr td{
+    padding: 10px;
+    border: 1px var(--dos) solid;
+    border-bottom: 3px var(--dos) solid;
+    font-size: 16px;
+    font-family: var(--textoNormal);
+}
+#id_user{
+    text-align: center;
+}
+a{
+    background: var(--uno);
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 2px;
+    
+}
+a:hover{
+    background: var(--dos);
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out all;
+}

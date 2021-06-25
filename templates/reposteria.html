@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres</title>
+    <script src="https://kit.fontawesome.com/d57cd56948.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="/static/css/consultaUsuarios.css"> -->
+    <link  rel="icon"   href="static/img/icono.ico" type="image/png"/>
+    <link rel="stylesheet" href="/static/css/reposteria.css">
+</head>
+<body>
+    <center>
+        <div class="tarjetas-postres">
+            <br>
+            <div class="logo-presentación">
+                <img src="/static/img/CatShopLogoBueno_Black.png" width="180">
+            </div>
+
+            <section class="tarjetas-presentacion">
+                <h2>Catálogo de repostería</h2>
+                <br>
+                {% block content %} 
+                {% for fila in filas %}
+                <div class="tarjetas">
+                    <img style="width: 180px;" src="{{fila['imagen']}}">
+                    <div class="texto">
+                        <p><strong>Nombre:</strong> {{fila["nombreP"]}}</p>
+                        <p><strong>Precio:</strong> ${{fila["precio"]}}.00</p>
+                        <p><strong>Disponibles:</strong> {{fila["disponibles"]}}</p>
+                    </div>
+                </div>
+                {% endfor %}  
+                {% endblock content %}
+            </section>
+            <br>
+            <br>
+            <a href="/" id="regresar-menu" type="button"> Regresar...</a>
+            <br><br>
+        </div>
+    </center>
+</body>
+</html>      

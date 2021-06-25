@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="icon"   href="../static/img/icono.ico" type="image/png" />
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/registro.css')}}"> -->
+    <link rel="stylesheet" href="/static/css/registro.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    <center>
+        <div class="caja-del-registro" id="ficha">
+            <section class="imagen">
+                <h3>BIENVENIDO</h3> <br>
+                <img src="/static/img/CatShopLogoBueno_Black.png" alt="" width="200">
+            </section>
+            <section class="formulario">
+                <form action="/registro" method="POST" id="registro-usuario">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombreRegistro" id="nombre" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required>
+                    </div>
+                    <div>
+                        <label for="ape">Apellidos:</label>
+                        <input type="text" name="apeRegistro" id="ape" pattern="^[a-zA-ZÑñÁáÉéÍíÓóÚú\s]+$" required>
+                    </div>
+                    <div>
+                        <label for="correo">Correo:</label>
+                        <input type="email" name="correoRegistro" id="correo" required>
+                    </div>
+                    <div>
+                        <label for="tel">Telefono:</label>
+                        <input type="text" name="telefonoRegistro" id="tel" maxlength="10" placeholder="El número no debe de tener espacios" required>
+                    </div>
+                    <div>
+                        <label for="contrasenia">Contraseña:</label>
+                        <input type="password" name="contra" id="contrasenia" maxlength="20" minlength="8" placeholder="La contraseña debe contener de 8 a 20 caracteres" required>
+                    </div>
+                    <div class="botones">
+                        <button id="btn-registro" type="submit">Registrar</button>
+                        <a id="regresar" type="button" href="/">Cancelar</a>
+                    </div>
+                    <h3 id="mensaje-del-registro">{{msg}}</h3>
+                </form>
+            </section>
+        </div>
+    </center>
+</body>
+</html>

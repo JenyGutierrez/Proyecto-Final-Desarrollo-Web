@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="icon"   href="static/img/icono.ico" type="image/png" />
+    <title>Catálogo</title>
+    <script src="https://kit.fontawesome.com/d57cd56948.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/catalogos.css')}}">
+    <script src="{{url_for('static', filename='js/funciones.js')}}"></script>
+</head>
+<body>
+    <nav>
+        <div id="parte1-nav">
+            <ul>
+                <a id="titulo-navbar" href="/"> 
+                    <img src="/static/img/icono.png" width="25"> CatShop</a>
+                <li class="principal" id="nosotros"><a href="">Nosotros</a></li>
+                <li class="principal" id="deptos"><a href="">Departamentos <i id="flecha-deptos" class="fas fa-angle-down"></i></a>
+                    <ul class="submenu-1">
+                        <li class="secundario pape" id="pape"><a href="">Papeleria <i class="far fa-arrow-alt-circle-right f1"></i></a>
+                            <ul class="submenu-2">
+                                <li class="tercero" id="cuadernos"><a href="">Cuadernos <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="plumas"><a href="">Plumas <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="decoracion"><a href="">Decoración <i class="fas fa-paw"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="secundario ropa" id="ropa"><a href="">Ropa <i class="far fa-arrow-alt-circle-right f2"></i></a>
+                            <ul class="submenu-3">
+                                <li class="tercero" id="botas"><a href="">Botas <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="playeras"><a href="">Playeras <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="vestidos"><a href="">Vestidos <i class="fas fa-paw"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="secundario acce" id="accesorios"><a href="">Accesorios <i class="far fa-arrow-alt-circle-right f3"></i></a>
+                            <ul class="submenu-4">
+                                <li class="tercero" id="colares"><a href="">Collares <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="pulseras"><a href="">Pulseras <i class="fas fa-paw"></i></a></li>
+                                <li class="tercero" id="cinturones"><a href="">Cinturones <i class="fas fa-paw"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="secundario repo" id="reposteria"><a href="/reposteria">Reposteria </i></a>
+                    </ul>
+                </li>
+                <li class="principal" id="promos"><a href="">Promociones</a></li>
+                <li class="principal" id="sucursales"><a href="/sucursales">Sucursales</a></li>
+            <li class="principal" id="cata"><a href="/catalogo">Catalogo</a></li>
+            </ul>
+        </div>
+        <div id="parte2-nav">
+            <a id="btn-registro" type="button" class="registro" href="{{url_for('registrar')}}">Registrarse</a>
+            <a type="button" class="inicio" href="{{url_for('consultar')}}">consultar</a>
+            <a href="" id="enlace-carro"><i id="carro" class="fab fa-opencart"></i></a>
+        </div>
+    </nav>
+
+    <!-- AQUI ES LA BARRA LATERAL -->
+    <div id="mostrador-catalogos">
+        <aside class="barra-lateral">
+            <h3>Esta es nuestra lista de cátalogos dependiendo del departamento.</h3>
+            <img src="../static/img/cata.png">
+            <div class="lista-departamentos-todos-los-catalogos">
+                <ul>
+                    <li><a href="" id="pap">Papeleria <i class="fas fa-pencil-ruler"></i></a></li>
+                    <li><a href="" id="ropa">Ropa <i class="fas fa-tshirt"></i></a></li>
+                    <li><a href="" id="acce">Accesorios <i class="fab fa-redhat"></i></a></li>
+                    <li onclick="mostrarcate('repo');"><a href="#" id="repo">Reposteria <i class="fas fa-birthday-cake"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+        <aside class="muestra-documentos">
+            <div id="reposteria-cata">
+                <embed src="/static/docs/Catálogo de repostería.pdf" type="application/pdf" width="75%" height="500px" />
+            </div>
+        </aside>
+    </div>
+<!-- <embed src="../static/docs/Envios.pdf" type="application/pdf" width="100%" height="400px" /> -->
+    <footer>
+        <section id="section-1">
+            <canvas id="canvas" width="300">
+                El navegador no soporta el componente canvas.
+            </canvas>
+        </section>
+        <section id="section-2">
+            <h2>Información del local</h2>
+            <div class="info-footer-personal">
+                <p><strong>Dirección: </strong></p>
+                <p>Lago Nicaragua #117 colonia Torre Blanca. Delegación: Miguel Hidalgo. C.P: 11280</p> <br>
+                <p><strong>Correo:</strong></p>
+                <p>
+                    <a href="mailto:417005610@pcpuma.acatlan.unam.mx">417005610@pcpuma.acatlan.unam.mx</a>
+                </p>
+            </div>
+        </section>
+        <section id="section-3">
+            <a href="https://www.facebook.com/CatShop-101290872206103/?ref=pages_you_manage" id="facebook" target="__blank">
+                <i class="fab fa-facebook"></i>
+                CatShop
+            </a> <br><br>
+            <a href="https://wa.me/5574919633" id="facebook" target="__blank">
+                <i class="fab fa-whatsapp"></i>
+                CatShop
+            </a>
+        </section>
+    </footer>
+</body>
+</html>

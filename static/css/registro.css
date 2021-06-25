@@ -1,0 +1,114 @@
+/* // fuente externa */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* ---datos generales -- */
+:root{
+    --uno: #0b182d;
+    --dos: #4d3a68;
+    --tres: #0092ff;
+    --cuatro: #00e9ff;
+    --cinco: #e0ffff;
+    --textoNormal: 'Manrope', sans-serif;
+    --textoTitulo: 'Dosis', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0b182d;
+    font-family: var(--textoNormal);
+}
+.caja-del-registro{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "im fo";
+    grid-template-rows: auto;
+    background: var(--cinco);
+    width: 50%;
+    /* height: 30%; */
+    margin-top: 10%;
+    border-radius: 5%;
+    font-size: 18px;
+}
+.imagen{
+    grid-area: im;
+    padding: 20px;
+    background: #e0ffff;
+    border-radius: 5% 0 0 5%;
+    border-right: 3px solid var(--uno);
+}
+.imagen img{
+    margin-top: 10px;
+}
+.imagen h3{
+    font-family: var(--textoTitulo);
+    font-style: oblique;
+    font-size: 28px;
+}
+.formulario{
+    grid-area: fo;
+    padding: 20px;
+    font-family: var(--textoNormal);
+    text-align: left;
+}
+.formulario input{
+    font-family: var(--textoNormal);
+    font-size: 18px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    background: var(--cinco);
+    border-bottom: 3px solid var(--uno);
+}
+.formulario input:focus{
+    outline: none;
+    background: #ffffff;
+    border-bottom: 3px solid var(--uno);
+    transition: 0.3s ease-in-out all;
+}
+#registro-usuario div{
+    margin-bottom: 10px;
+}
+.botones{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+#btn-registro{
+    font-size: 18px;
+    font-family: var(--textoNormal);
+    background-color: var(--tres);
+    color: white;
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+#regresar{
+    font-size: 18px;
+    font-family: var(--textoNormal);
+    background-color: var(--dos);
+    color: white;
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btn-registro:hover, #regresar:hover{
+    background-color: var(--uno);
+    border-radius: 8px;
+}
+.mensaje-del-registro{
+    font-family: var(--textoNormal);
+    font-size: 16px;
+    font-style: oblique;
+    
+}

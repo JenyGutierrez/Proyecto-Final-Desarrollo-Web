@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="icon"   href="static/img/icono.ico" type="image/png" />
+    <title>CatShop</title>
+    <script src="https://kit.fontawesome.com/d57cd56948.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="{{url_for('static', filename='js/funciones.js')}}"></script>
+</head>
+<body>
+<!-- Barra de navegacion -->
+<nav>
+    <div id="parte1-nav">
+        <ul>
+            <a id="titulo-navbar" href="/"> 
+                <img src="/static/img/icono.png" width="25"> CatShop</a>
+            <li class="principal" id="nosotros"><a href="">Nosotros</a></li>
+            <li class="principal" id="deptos"><a href="">Departamentos <i id="flecha-deptos" class="fas fa-angle-down"></i></a>
+                <ul class="submenu-1">
+                    <li class="secundario pape" id="pape"><a href="">Papeleria <i class="far fa-arrow-alt-circle-right f1"></i></a>
+                        <ul class="submenu-2">
+                            <li class="tercero" id="cuadernos"><a href="">Cuadernos <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="plumas"><a href="">Plumas <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="decoracion"><a href="">Decoración <i class="fas fa-paw"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="secundario ropa" id="ropa"><a href="">Ropa <i class="far fa-arrow-alt-circle-right f2"></i></a>
+                        <ul class="submenu-3">
+                            <li class="tercero" id="botas"><a href="">Botas <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="playeras"><a href="">Playeras <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="vestidos"><a href="">Vestidos <i class="fas fa-paw"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="secundario acce" id="accesorios"><a href="">Accesorios <i class="far fa-arrow-alt-circle-right f3"></i></a>
+                        <ul class="submenu-4">
+                            <li class="tercero" id="colares"><a href="">Collares <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="pulseras"><a href="">Pulseras <i class="fas fa-paw"></i></a></li>
+                            <li class="tercero" id="cinturones"><a href="">Cinturones <i class="fas fa-paw"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="secundario repo" id="reposteria"><a href="/reposteria">Reposteria </i></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="principal" id="promos"><a href="">Promociones</a></li>
+            <li class="principal" id="sucursales"><a href="/sucursales">Sucursales</a></li>
+            <li class="principal" id="cata"><a href="/catalogo">Catalogo</a></li>
+        </ul>
+    </div>
+    <div id="parte2-nav">
+        <a id="btn-registro" type="button" class="registro" href="{{url_for('registrar')}}">Registrarse</a>
+        <a type="button" class="inicio" href="{{url_for('consultar')}}">consultar</a>
+        <a href="#" id="enlace-carro"><i id="carro" class="fab fa-opencart"></i></a>
+    </div>
+</nav>
+
+<!-- IMAGEN DE CINTA DE BIENVENIDA -->
+<div class="imagen-cinta">
+    <div class="separador-cinta-imagen"></div>
+    <img src="/static/img/CatShopLogoBueno_White.png">
+    <h3>Negocio mexicano con gran extenso</h4>
+    <h3>de productos nacionales e internacionales</h4>
+    <br>
+    <img id="separador" src="/static/img/cinta-separadora.png">
+    <h4>Contamos con varias sucursales a lo largo de la</h5>
+    <h4>Republica mexicana, además, envios a domicilio</h5>
+    <br><br>
+</div>
+
+<!-- ---- Presentacion de tarjetas de ayuda ----- -->
+<div class="container-fluid">
+    <h2 class="titulo-cartas">Podrás consultar en la siguiente sección nuestros <br>
+    métodos de pago y guias de envio</h2>
+    <div class="tarjeta-envio">
+        <img src="static/img/CatShopLogoBueno_Black.png">
+        <p id="texto-tarjeta">Aqui encontrarás las instrucciones <br>
+        para el método de pago.</p>
+        <a id="leer-mas" type="button" href="static/docs/Metodos de pago.pdf" download="metodo-de-pago">Leer más <i class="fas fa-arrow-alt-circle-right"></i></a>
+    </div>
+    <div class="tarjeta-pagos">
+        <img src="static/img/CatShopLogoBueno_White.png">
+        <p id="texto-pago">Aqui encontrarás las tarifas <br>
+        de distintas paqueterias</p>
+        <a id="leer-mas-1" type="button" href="static/docs/Envios.pdf" download="envios">Leer más <i class="fas fa-arrow-alt-circle-right"></i></a>
+    </div>
+    <br><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OSg02jpXy_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<!-- ---esta seccion es del footer---- -->
+<footer>
+    <section id="section-1">
+        <!-- // el canvas no jala la imagen -->
+        <!-- <canvas id="micanvas" width="350"></canvas> -->
+    </section>
+    <section id="section-2">
+        <h2>Información del local principal</h2>
+        <div class="info-footer-personal">
+            <p><strong>Dirección: </strong></p>
+            <p>Lago Nicaragua #117 colonia Torre Blanca. Delegación: Miguel Hidalgo. C.P: 11280</p> <br>
+            <p><strong>Correo:</strong></p>
+            <p>
+                <a href="mailto:417005610@pcpuma.acatlan.unam.mx">417005610@pcpuma.acatlan.unam.mx</a>
+            </p> <br>
+            <p><strong>Número de cuenta: </strong></p>
+            <p>417005610</p>
+        </div>
+    </section>
+    <section id="section-3">
+        <a href="https://www.facebook.com/CatShop-101290872206103/?ref=pages_you_manage" id="facebook" target="__blank">
+            <i class="fab fa-facebook"></i>
+            CatShop
+        </a> <br><br>
+        <a href="https://wa.me/5574919633" id="facebook" target="__blank">
+            <i class="fab fa-whatsapp"></i>
+            CatShop
+        </a>
+    </section>
+</footer>
+</body>
+</html>

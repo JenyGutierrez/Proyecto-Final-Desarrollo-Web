@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de usuarios</title>
+    <script src="https://kit.fontawesome.com/d57cd56948.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/consultaUsuarios.css">
+    <link  rel="icon"   href="static/img/icono.ico" type="image/png" />
+</head>
+<body>
+    <center>
+        <div class="tarjetas-de-usuarios">
+            <br>
+            <img src="/static/img/CatShopLogoBueno_Black.png" width="180">
+            <h2>Aqui se podrán consultar los usuarios que se tienen registrados</h2>
+            <br>
+            <p id="instrucciones">Advertencia: solo aguanta 10 registros la base de datos, <br>al querer borrar el registro 11 lanza un error</p>
+            <table>  
+                <thead>  
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>E-mail</td>
+                    <td>Télefono</td>
+                    <td>Contraseña</td>
+                    <td>Acción</td>
+                </thead>  
+                {% block content %} 
+                {% for fila in filas %}  
+                    <tr>
+                        <td id="id_user">{{fila["idU"]}}</td>  
+                        <td id="nombre_user">{{fila["nombre"]}}</td>  
+                        <td id="apellido_user">{{fila["apellido"]}}</td>
+                        <td id="correo_user">{{fila["email"]}}</td>
+                        <td id="telefono_user">{{fila["telefono"]}}</td>
+                        <td id="pass_user">{{fila["pass"]}}</td>
+                        <td><a type="button" id="borrar" href="{{ url_for('borrar', my_var=fila['idU']) }}" > <i class="fas fa-trash"></i></a></td>
+                    </tr>  
+                {% endfor %}  
+                {% endblock %} 
+            </table>
+            <br><br>
+            
+        </div>
+    </center>
+</body>
+</html>
